@@ -1,0 +1,81 @@
+#include<iostream>
+using namespace std;
+main()
+{
+  char room;
+  float dis;
+  float price_1;
+  float price_2;
+  string month;
+  cout<<"Which type of room do you want (studio/appartment)....(s/a)....";
+  cin>>room;
+  if(room=='s')
+  {
+  	cout<<"Enter the months....";
+  	cin>>month;
+  	if(month=="may" || month=="octuber")
+  	{
+  	int stay_night=50;
+  	int days;
+  	cout<<"Enter the numbers of days...";
+  	cin>>days;
+  	if(days<=7)
+  	{
+  		 price_1=stay_night*7;
+  		cout<<"Your price is..."<<price_1<<"$";
+	} //3th if bracket
+	else
+	{
+		if(days>=7)
+		{
+			dis=  price_1*5.0/100.0;
+			int f_price=(stay_night*7)-dis;
+			cout<<"Your price after discount is..."<<f_price<<"$";
+		} // first if within else bracket
+	} //first else bracket
+  	
+	  }// second if bracket
+	  if(month=="june" || month=="september")
+	  {
+	  	int stay_night_1=75;
+	  	int days;
+  	cout<<"Enter the numbers of days...";
+  	cin>>days;
+  	if(days<=7)
+  	{
+  		int price21=stay_night_1*7;
+  		cout<<"Your price is..."<<price_2<<"$";
+	} 
+	else
+	{
+		if(days>=7)
+		{
+			dis=  price_1*5.0/100.0;
+			int f_price_1=(stay_night_1*7)-dis;
+			cout<<"Your price after discount is..."<<f_price_1<<"$";
+		} 
+	} 
+	  } 
+	  if(month=="july" || month=="august")
+  	{
+  	int stay_night_2=76;
+  	int days;
+  	cout<<"Enter the numbers of days...";
+  	cin>>days;
+  	if(days<=7)
+  	{
+  		 price_2=stay_night_2*7;
+  		cout<<"Your price is..."<<price_2<<"$";
+	} //3th if bracket
+	else
+	{
+		if(days>=7)
+		{
+			dis=  price_2*5.0/100.0;
+			int f_price_2=(stay_night_2*7)-dis;
+			cout<<"Your price after discount is..."<<f_price_2<<"$";
+		} // first if within else bracket
+  }
+  }
+  } //main if bracket
+}// main bracket
